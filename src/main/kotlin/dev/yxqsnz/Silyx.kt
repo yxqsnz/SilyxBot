@@ -11,6 +11,8 @@ import dev.yxqsnz.logger.Logger
 import net.dv8tion.jda.api.JDA
 import net.dv8tion.jda.api.JDABuilder
 import dev.yxqsnz.service.ListenersService
+import dev.yxqsnz.service.CommandService
+import dev.yxqsnz.silyx.command.registerCommands
 
 class Silyx {
    lateinit var config: Config
@@ -20,9 +22,11 @@ class Silyx {
    fun start(config: Config) {
       this.logger.info("Silyx Apenas outro simples bot para o discord!")
       this.config = config
-      
+      CommandService.setup(this)
+      registerCommands()
       silyxBuilder = JDABuilder.createDefault(config.discord.token)
       ListenersService.register(silyxBuilder)
+      
       client = silyxBuilder.build()
    }
 }

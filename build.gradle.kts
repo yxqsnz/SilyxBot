@@ -20,6 +20,7 @@ repositories {
 }
 
 dependencies {
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3")
     // Klaxon para JSON
     implementation("com.beust:klaxon:5.5")
     // MongoDb para Banco de dados
