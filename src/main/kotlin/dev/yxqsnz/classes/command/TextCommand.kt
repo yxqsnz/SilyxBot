@@ -6,7 +6,7 @@
 
 package dev.yxqsnz.classes.command
 
-abstract class TextCommand (val options: Options){
+abstract class TextCommand(val options: Options) {
 	abstract suspend fun execute(context: CommandContext)
 	abstract class Options(val name: String) {
 		open var description: String = "Comando sem descrição"

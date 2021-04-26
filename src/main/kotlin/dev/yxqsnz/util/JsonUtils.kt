@@ -9,5 +9,5 @@ package dev.yxqsnz.util
 import com.beust.klaxon.Klaxon
 
 inline fun <reified T> parseJson(rawJson: String): T? {
-    return Klaxon().parse<T>(rawJson)
+	return Klaxon().parse<T>(rawJson)
 }

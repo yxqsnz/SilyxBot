@@ -4,20 +4,10 @@
  # License: GNU GPL v3                                                        #
  #############################################################################*/
 
-package dev.yxqsnz.classes
 
-data class Discord(
-	val bot_owners: List<String>,
-	val token: String,
-	val prefix: String
-)
+package dev.yxqsnz.common
 
-data class Database(
-	val mongo_uri: String
-)
-
-data class Config(
-	val environment: String,
-	val discord: Discord,
-	val database: Database
-)
+object Urls {
+	const val MEOW_API = "https://aws.random.cat/meow"
+	val WAIFU_PICS = fun(fw: String, tp: String): String = "https://waifu.pics/api/$fw/$tp"
+}

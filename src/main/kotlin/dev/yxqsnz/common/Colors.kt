@@ -4,20 +4,13 @@
  # License: GNU GPL v3                                                        #
  #############################################################################*/
 
-package dev.yxqsnz.classes
+package dev.yxqsnz.common
 
-data class Discord(
-	val bot_owners: List<String>,
-	val token: String,
-	val prefix: String
-)
+import java.awt.Color
 
-data class Database(
-	val mongo_uri: String
-)
-
-data class Config(
-	val environment: String,
-	val discord: Discord,
-	val database: Database
-)
+object Colors {
+	val DISCORD_BLUE = Color(114, 137, 218)
+	val LORITTA_AQUA = Color(26, 160, 254)
+	val ROBLOX_RED = Color(226, 35, 26)
+	val SILYX_RED = Color(255, 66, 77)
+}

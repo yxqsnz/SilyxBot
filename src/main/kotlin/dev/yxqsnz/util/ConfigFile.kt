@@ -18,6 +18,6 @@ object ConfigFile {
 			println("Por favor crie um arquivo chamado config.json.")
 			exitProcess(1)
 		}
-	    return Klaxon().parse<Config>(configFile)
+		return Klaxon().parse<Config>(configFile)
 	}
 }

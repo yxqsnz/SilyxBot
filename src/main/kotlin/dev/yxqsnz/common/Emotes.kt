@@ -4,20 +4,9 @@
  # License: GNU GPL v3                                                        #
  #############################################################################*/
 
-package dev.yxqsnz.classes
+package dev.yxqsnz.common
 
-data class Discord(
-	val bot_owners: List<String>,
-	val token: String,
-	val prefix: String
-)
-
-data class Database(
-	val mongo_uri: String
-)
-
-data class Config(
-	val environment: String,
-	val discord: Discord,
-	val database: Database
-)
+object Emotes {
+	const val KOTLIN_LOGO = "<:kotlin_logo:832277232721461339>"
+	const val JDA_LOGO = "<:jda_logo:835932287651545088>"
+}

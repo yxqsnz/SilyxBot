@@ -4,20 +4,7 @@
  # License: GNU GPL v3                                                        #
  #############################################################################*/
 
-package dev.yxqsnz.classes
+package dev.yxqsnz.classes.api
 
-data class Discord(
-	val bot_owners: List<String>,
-	val token: String,
-	val prefix: String
-)
-
-data class Database(
-	val mongo_uri: String
-)
-
-data class Config(
-	val environment: String,
-	val discord: Discord,
-	val database: Database
-)
+class MeowApi(val file: String)
+class WaifuPics(val url: String)

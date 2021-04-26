@@ -6,7 +6,8 @@
 
 package dev.yxqsnz.service
 
-import dev.yxqsnz.silyx.listeners.*
+import dev.yxqsnz.silyx.listeners.MessageReceivedListener
+import dev.yxqsnz.silyx.listeners.ReadyListener
 import net.dv8tion.jda.api.JDABuilder
 
 object ListenersService {
