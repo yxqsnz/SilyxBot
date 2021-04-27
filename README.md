@@ -24,7 +24,7 @@
 }
 ```
 
-# 🗒️ Licensa
+# 🗒️ Licença
  + Esse bot está usando a licensa GNU GPL v3.
 # Autor
    🧔 Yxqsnz
