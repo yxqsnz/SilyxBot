@@ -16,23 +16,23 @@ import dev.yxqsnz.util.parseJson
 import net.dv8tion.jda.api.EmbedBuilder
 
 class CatCommand : TextCommand(Options) {
-	companion object Options : TextCommand.Options("cat") {
-		override var aliases: List<String> = listOf("gato")
-		override var description: String = "Mostra uma foto de um gato"
-	}
-	
-	override suspend fun execute(context: CommandContext) {
-		with(context) {
-			channel.sendTyping()
-			val res = requests.get(Urls.MEOW_API)
-			val resultJSON = parseJson<MeowApi>(res.body!!.string())
-			val embed = EmbedBuilder()
-			embed.setTitle("Meow!")
-			embed.setDescription("[Clique aqui](${resultJSON!!.file}) caso a imagem não apareça.")
-			embed.setColor(Colors.DISCORD_BLUE)
-			embed.setImage(resultJSON.file)
-			message.reply(embed.build()).queue()
-			res.body!!.close()
-		}
-	}
+    companion object Options : TextCommand.Options("cat") {
+        override var aliases: List<String> = listOf("gato")
+        override var description: String = "Mostra uma foto de um gato"
+    }
+
+    override suspend fun execute(context: CommandContext) {
+        with(context) {
+            channel.sendTyping()
+            val res = requests.get(Urls.MEOW_API)
+            val resultJSON = parseJson<MeowApi>(res.body!!.string())
+            val embed = EmbedBuilder()
+            embed.setTitle("Meow!")
+            embed.setDescription("[Clique aqui](${resultJSON!!.file}) caso a imagem não apareça.")
+            embed.setColor(Colors.DISCORD_BLUE)
+            embed.setImage(resultJSON.file)
+            message.reply(embed.build()).queue()
+            res.body!!.close()
+        }
+    }
 }

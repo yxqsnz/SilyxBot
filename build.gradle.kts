@@ -46,7 +46,12 @@ val fatJar = task("fatJar", type = Jar::class) {
     manifest {
         attributes["Main-Class"] = "SilyxLauncherKt"
     }
-    from(configurations.runtimeClasspath.get().map { if (it.isDirectory) it else zipTree(it) })
+    from(configurations.runtimeClasspath.get().map { if (it.isDirectory) it else {
+        if (!it.name.endsWith("pom")) {
+            zipTree(it)
+        } else { it }
+    }
+    })
     with(tasks.jar.get() as CopySpec)
 }
 

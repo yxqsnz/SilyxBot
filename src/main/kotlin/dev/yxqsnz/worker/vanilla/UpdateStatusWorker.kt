@@ -12,14 +12,14 @@ import net.dv8tion.jda.api.OnlineStatus
 import net.dv8tion.jda.api.entities.Activity
 
 class UpdateStatusWorker : Worker("Update status Worker") {
-	override suspend fun exec() {
-		with(context) {
-			while (true) {
-				silyx.client.presence.setPresence(OnlineStatus.IDLE, Activity.playing("OwO"))
-				delay(5000)
-				silyx.client.presence.setPresence(OnlineStatus.IDLE, Activity.playing("Criado pelo yxqsnz!"))
-				delay(5000)
-			}
-		}
-	}
+    override suspend fun exec() {
+        with(context) {
+            while (true) {
+                silyx.client.presence.setPresence(OnlineStatus.IDLE, Activity.playing("OwO"))
+                delay(5000)
+                silyx.client.presence.setPresence(OnlineStatus.IDLE, Activity.playing("Criado pelo yxqsnz!"))
+                delay(5000)
+            }
+        }
+    }
 }

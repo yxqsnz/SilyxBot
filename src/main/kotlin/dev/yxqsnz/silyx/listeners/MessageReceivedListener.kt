@@ -13,11 +13,11 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent
 import net.dv8tion.jda.api.hooks.ListenerAdapter
 
 class MessageReceivedListener : ListenerAdapter() {
-	override fun onMessageReceived(event: MessageReceivedEvent) {
-		runBlocking {
-			launch {
-				CommandService.exec(event)
-			}
-		}
-	}
+    override fun onMessageReceived(event: MessageReceivedEvent) {
+        runBlocking {
+            launch {
+                CommandService.exec(event)
+            }
+        }
+    }
 }

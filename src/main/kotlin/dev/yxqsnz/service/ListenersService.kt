@@ -11,8 +11,8 @@ import dev.yxqsnz.silyx.listeners.ReadyListener
 import net.dv8tion.jda.api.JDABuilder
 
 object ListenersService {
-	fun register(builder: JDABuilder) {
-		builder.addEventListeners(MessageReceivedListener())
-		builder.addEventListeners(ReadyListener())
-	}
+    fun register(builder: JDABuilder) {
+        builder.addEventListeners(MessageReceivedListener())
+        builder.addEventListeners(ReadyListener())
+    }
 }

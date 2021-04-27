@@ -8,6 +8,6 @@ import dev.yxqsnz.Silyx
 import dev.yxqsnz.util.ConfigFile
 
 fun main() {
-	val silyx = Silyx()
-	ConfigFile.read()?.let { silyx.start(it) }
+    val silyx = Silyx()
+    ConfigFile.read()?.let { silyx.start(it) }
 }

@@ -14,14 +14,14 @@ import net.dv8tion.jda.api.events.ReadyEvent
 import net.dv8tion.jda.api.hooks.EventListener
 
 class ReadyListener : EventListener {
-	override fun onEvent(event: GenericEvent) {
-		if (event is ReadyEvent) {
-			println("Eu estou pronto!")
-			runBlocking {
-				launch {
-					WorkerController.start()
-				}
-			}
-		}
-	}
+    override fun onEvent(event: GenericEvent) {
+        if (event is ReadyEvent) {
+            println("Eu estou pronto!")
+            runBlocking {
+                launch {
+                    WorkerController.start()
+                }
+            }
+        }
+    }
 }

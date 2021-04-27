@@ -13,9 +13,9 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent
 
 
 class CommandContext(
-	val silyx: Silyx,
-	val message: Message,
-	val channel: MessageChannel,
-	val event: MessageReceivedEvent,
-	val args: List<String>
+    val silyx: Silyx,
+    val message: Message,
+    val channel: MessageChannel,
+    val event: MessageReceivedEvent,
+    val args: List<String>
 )
